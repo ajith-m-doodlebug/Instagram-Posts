@@ -10,9 +10,9 @@ movies = [{'name': 'The Godfather', 'imdb': '9.2/10'},
 
 @app.route('/getImdb/<name>', methods=['GET'])
 def getImdb(name):
-    for i, q in enumerate(movies):
-        if q['name'] == name:
-            theMovie = movies[i]
+    for index, value in enumerate(movies):
+        if value['name'] == name:
+            theMovie = movies[index]
     return jsonify(theMovie)
 
 
